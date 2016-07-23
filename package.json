@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "pug": "pug ./.src/pug/index.pug --out ./",
+    "js": "rollup -c",
+    "stylus": "stylus ./.src/stylus/index.styl --out ./all.min.css"
+  },
   "author": "Dafrok <o.o@mug.dog>",
   "license": "MIT",
   "devDependencies": {
-    "rollup": "^0.34.1",
     "vue": "^1.0.26"
   }
 }

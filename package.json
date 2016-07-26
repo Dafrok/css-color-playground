@@ -6,11 +6,17 @@
   "scripts": {
     "pug": "pug ./.src/pug/index.pug --out ./",
     "js": "rollup -c",
-    "stylus": "stylus ./.src/stylus/index.styl --out ./all.min.css"
+    "stylus": "stylus ./.src/stylus/index.styl --out ./all.min.css",
+    "build": "npm run pug && npm run js && npm run stylus"
   },
   "author": "Dafrok <o.o@mug.dog>",
   "license": "MIT",
   "devDependencies": {
+    "babel-preset-es2015-rollup": "^1.1.1",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-commonjs": "^3.3.1",
+    "rollup-plugin-node-resolve": "^1.7.1",
+    "rollup-plugin-replace": "^1.1.1",
     "vue": "^1.0.26"
   }
 }

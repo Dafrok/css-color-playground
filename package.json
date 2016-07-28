@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pug": "pug ./.src/pug/index.pug --out ./",
-    "js": "rollup -c",
-    "stylus": "stylus ./.src/stylus/index.styl --out ./all.min.css",
-    "build": "npm run pug && npm run js && npm run stylus",
-    "browser-sync": "browser-sync start --server --file='./index.html ./all.min.css ./all.min.js'",
-    "dev": "npm run browser-sync"
+    "build:pug": "pug ./src/pug/index.pug --out ./dist",
+    "build:js": "rollup -c",
+    "build:stylus": "stylus ./src/stylus/index.styl --out ./dist/all.min.css",
+    "build": "npm run build:js && npm run build:pug && npm run build:stylus",
+    "browser-sync": "browser-sync start --server --startPath ./dist --files='./*.html ./*.css ./*.js'",
+    "dev:pug": "onchange './.src/pug/**' -- npm run pug",
+    "dev:stylus": "onchange './.src/stylus/**' -- npm run stylus",
+    "dev:js": "onchange './.src/js/**' -- npm run js",
+    "dev": "npm run build && npm run browser-sync & npm run dev:js & npm run dev:stylus & npm run dev:pug"
   },
   "author": "Dafrok <o.o@mug.dog>",
   "license": "MIT",

@@ -1,4 +1,3 @@
-import path from 'path'
 import babel from 'rollup-plugin-babel'
 import nodeResolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
@@ -6,8 +5,8 @@ import replace from 'rollup-plugin-replace'
 import uglify from 'rollup-plugin-uglify'
 
 export default {
-    entry: path.resolve('./.src/js/index.js'),
-    dest: 'all.min.js',
+    entry: 'src/js/index.js',
+    dest: 'dist/all.min.js',
     format: 'iife',
     moduleName: 'cssColorPlayground',
     plugins: [

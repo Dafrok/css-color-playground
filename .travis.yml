@@ -1,0 +1,10 @@
+language: node_js
+script:
+  - npm run build
+after_script
+  - git init
+  - git config user.name "Dafrok"
+  - git config user.email "o.o@mug.dog"
+  - git add .
+  - git commit -m 'Travis build prepare'
+  - git push --force --quiet "https://${GITHUB_TOKEN}@github.com/SyaOS/sya.org.cn.git" master:gh-pages

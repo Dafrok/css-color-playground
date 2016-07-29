@@ -11,4 +11,4 @@ after_script:
   - git config user.email "o.o@mug.dog"
   - git add .
   - git commit -m "Travis build prepare"
-  - git push "https://${GITHUB_TOKEN}@github.com/SyaOS/sya.org.cn.git" master:gh-pages --force --quiet
+  - git push "https://${GITHUB_TOKEN}@github.com/Dafrok/css-color-playground.git" master:gh-pages --force --quiet

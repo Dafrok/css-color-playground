@@ -2,7 +2,6 @@
   "name": "css-color-online",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "build:pug": "pug ./src/pug/index.pug --out ./dist",
     "build:js": "rollup -c",
@@ -18,7 +17,6 @@
   "license": "MIT",
   "devDependencies": {
     "babel-preset-es2015-rollup": "^1.1.1",
-    "onchange": "^2.5.0",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-plugin-commonjs": "^3.3.1",
     "rollup-plugin-node-resolve": "^1.7.1",

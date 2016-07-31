@@ -5,7 +5,7 @@ branches:
   only: master
 script:
   - npm run build
-after_script
+after_script:
   - git init
   - git config user.name "Dafrok"
   - git config user.email "o.o@mug.dog"

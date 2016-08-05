@@ -3,8 +3,9 @@ html
   head
     link(href="all.min.css", rel="stylesheet", type="text/css")
   body
-    each val in ['HEX', 'RGB', 'RGBA', 'HSL', 'HSLA', 'STRING']
-      label
-        span=val
-        input
+    section#app
+      each val in ['HEX', 'RGB', 'RGBA', 'HSL', 'HSLA', 'STRING']
+        label
+          span=val
+          input(v-model=val)
     script(src="all.min.js")

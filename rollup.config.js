@@ -10,7 +10,7 @@ export default {
     format: 'iife',
     moduleName: 'cssColorPlayground',
     plugins: [
-        babel({presets: ['es2015-rollup']}),
+        // babel({presets: ['es2015-rollup']}),
         nodeResolve({
             jsnext: true,
             main: true,
@@ -20,8 +20,9 @@ export default {
             include: 'node_modules/**'
         }),
         replace({
-            'process.env.NODE_ENV': "'production'"
+            'process.env.NODE_ENV': "'development'"
+            // 'process.env.NODE_ENV': "'production'"
         }),
-        uglify()
+        // uglify()
     ]
 }

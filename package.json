@@ -29,7 +29,8 @@
     "stylus": "^0.54.5"
   },
   "dependencies": {
-    "vue": "^1.0.26",
-    "color-factory": "^0.1.7"
+    "clipboard-js": "^0.2.0",
+    "color-factory": "^0.1.7",
+    "vue": "^1.0.26"
   }
 }

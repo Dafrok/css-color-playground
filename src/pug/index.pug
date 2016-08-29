@@ -11,4 +11,5 @@ html
         label.controller
           span=val
           input(v-model=val, readonly)
+          button(@click="copy("+val+")") copy
     script(src="all.min.js")

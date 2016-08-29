@@ -1,10 +1,16 @@
 import Vue from 'vue'
 import Color from 'color-factory'
+import clipboard from 'clipboard-js'
 
 export default new Vue({
   el: '#app',
   data () {
     return { inputValue: '' }
+  },
+  methods: {
+    copy (color) {
+      clipboard.copy(color)
+    }
   },
   get computed() {
     const observer = {}

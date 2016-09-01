@@ -1,5 +1,5 @@
 {
-  "name": "css-color-online",
+  "name": "css-color-playground",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "clipboard-js": "^0.2.0",
-    "color-factory": "^0.1.7",
+    "color-factory": "^0.1.8",
     "vue": "^1.0.26"
   }
 }

@@ -6,6 +6,7 @@ branches:
 script:
   - npm run build
 after_script:
+  - cd dist
   - git init
   - git config user.name "Dafrok"
   - git config user.email "o.o@mug.dog"

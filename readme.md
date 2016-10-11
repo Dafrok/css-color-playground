@@ -1,5 +1,7 @@
 # CSS Color Playground
 
+Based on [color-factory](https://www.npmjs.com/package/color-factory)
+
 ## Develop
 
 ```

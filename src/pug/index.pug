@@ -1,15 +1,19 @@
 doctype html
 html
   head
-    link(href="all.min.css", rel="stylesheet", type="text/css")
+    link(href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css", rel="stylesheet")
+    link(rel="stylesheet", href="//cdn.bootcss.com/bulma/0.2.1/css/bulma.min.css")
   body
-    section#app
-      label.controller
-        span=val
-        input(v-model="inputValue")
+    section.container
+      div.notification
+      label.label CSS Color
+        p.control
+          input.input(v-model="inputValue", placeholder="Input CSS color here", type="text")
       each val in ['HEX', 'RGB', 'RGBA', 'HSL', 'HSLA', 'STRING']
-        label.controller
-          span=val
-          input(v-model=val, readonly)
-          button(@click="copy("+val+")") copy
+        label.label=val
+        p.control.has-addons
+          input.input.is-expanded(v-model=val, readonly, type="text", @mouseenter="focus")
+          button.button(@click="copy("+val+")")
+            span.icon.is-small
+              i.fa.fa-copy
     script(src="all.min.js")

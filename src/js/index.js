@@ -10,6 +10,10 @@ export default new Vue({
   methods: {
     copy (color) {
       clipboard.copy(color)
+    },
+    focus (e) {
+      e.target.focus()
+      e.target.select()
     }
   },
   get computed() {

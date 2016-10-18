@@ -5,13 +5,11 @@
   "scripts": {
     "build:pug": "pug ./src/pug/index.pug --out ./dist",
     "build:js": "rollup -c",
-    "build:stylus": "stylus ./src/stylus/index.styl --out ./dist/all.min.css",
-    "build": "npm run build:js && npm run build:pug && npm run build:stylus",
+    "build": "npm run build:js && npm run build:pug",
     "browser-sync": "browser-sync start --server --startPath ./dist --files='dist/**'",
     "dev:pug": "onchange './src/pug/**' -- npm run build:pug",
-    "dev:stylus": "onchange './src/stylus/**' -- npm run build:stylus",
     "dev:js": "onchange './src/js/**' -- npm run build:js",
-    "dev": "npm run build && npm run browser-sync & npm run dev:js & npm run dev:stylus & npm run dev:pug"
+    "dev": "npm run build && npm run browser-sync & npm run dev:js & npm run dev:pug"
   },
   "author": "Dafrok <o.o@mug.dog>",
   "license": "MIT",
@@ -25,8 +23,7 @@
     "rollup-plugin-commonjs": "^3.3.1",
     "rollup-plugin-node-resolve": "^1.7.1",
     "rollup-plugin-replace": "^1.1.1",
-    "rollup-plugin-uglify": "^1.0.1",
-    "stylus": "^0.54.5"
+    "rollup-plugin-uglify": "^1.0.1"
   },
   "dependencies": {
     "clipboard-js": "^0.2.0",

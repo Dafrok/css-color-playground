@@ -8,7 +8,7 @@ html
       div.notification
       label.label CSS Color
         p.control
-          input.input(v-model="inputValue", placeholder="Input CSS color here", type="text")
+          input.input(v-model="inputValue", placeholder="Input CSS color here", type="text", @mouseenter="focus")
       each val in ['HEX', 'RGB', 'RGBA', 'HSL', 'HSLA', 'STRING']
         label.label=val
         p.control.has-addons

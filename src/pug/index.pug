@@ -4,16 +4,30 @@ html
     link(href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css", rel="stylesheet")
     link(rel="stylesheet", href="//cdn.bootcss.com/bulma/0.2.1/css/bulma.min.css")
   body
-    section#app.container
-      div.notification
-      label.label CSS Color
-        p.control
-          input.input(v-model="inputValue", placeholder="Input CSS color here", type="text", @mouseenter="focus")
-      each val in ['HEX', 'RGB', 'RGBA', 'HSL', 'HSLA', 'STRING']
-        label.label=val
-        p.control.has-addons
-          input.input.is-expanded(v-model=val, readonly, type="text", @mouseenter="focus")
-          button.button(@click="copy("+val+")")
-            span.icon.is-small
-              i.fa.fa-copy
+    section#app
+      section.hero.is-primary
+        .hero-body
+          .container
+            .columns.is-vcentered
+              .column
+                p.title CSS Color Playground
+                p.subtitle Transform your CSS color to <strong>every formats</strong>.
+              .column.is-narrow
+                #carbon.box(v-bind:style="{backgroundColor: inputValue, color: '#333'}") Preview
+      section.section
+        section.container
+          p.title INPUT
+          .box
+            label.label CSS Color
+              p.control
+                input.input(v-model="inputValue", placeholder="Input CSS color here", type="text", @mouseenter="focus")
+          p.title OUTPUT
+          .box
+            each val in ['HEX', 'RGB', 'RGBA', 'HSL', 'HSLA', 'STRING']
+              label.label=val
+              p.control.has-addons
+                input.input.is-expanded(v-model=val, readonly, type="text", @mouseenter="focus")
+                button.button(@click="copy("+val+")")
+                  span.icon.is-small
+                    i.fa.fa-copy
     script(src="all.min.js")

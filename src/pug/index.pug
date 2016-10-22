@@ -10,23 +10,20 @@ html
           .container
             .columns.is-vcentered
               .column
-                p.title CSS Color Playground
-                p.subtitle Transform your CSS color to <strong>every formats</strong>.
-              .column.is-narrow
-                #carbon.box(v-bind:style="{backgroundColor: inputValue, color: '#333'}") Preview
+                h1.title CSS Color Playground
+                h2.subtitle Transform your CSS color to <strong>every formats</strong>.
+              .column
+                p.control.has-icon.is-expanded
+                  input.input.is-flat(v-model="inputValue", placeholder="CSS color", type="text", @mouseenter="focus")
+                  i.fa.fa-css3
       section.section
         section.container
-          p.title INPUT
-          .box
-            label.label CSS Color
-              p.control
-                input.input(v-model="inputValue", placeholder="Input CSS color here", type="text", @mouseenter="focus")
-          p.title OUTPUT
+          h3.title OUTPUT
           .box
             each val in ['HEX', 'RGB', 'RGBA', 'HSL', 'HSLA', 'STRING']
               label.label=val
               p.control.has-addons
-                input.input.is-expanded(v-model=val, readonly, type="text", @mouseenter="focus")
+                input.input.is-flat.is-expanded(v-model=val, readonly, type="text", @mouseenter="focus")
                 button.button(@click="copy("+val+")")
                   span.icon.is-small
                     i.fa.fa-copy

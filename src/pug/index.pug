@@ -12,7 +12,17 @@ html
             .columns.is-vcentered
               .column
                 h1.title CSS Color Playground
-                h2.subtitle Transform your CSS color to <strong>every formats</strong>.
+                h2.subtitle Transform your CSS color string to <strong>every formats</strong>.
+                p
+                  a(href="https://github.com/Dafrok/css-color-playground").button.is-small
+                    span.icon.is-small
+                      i.fa.fa-star
+                    span Star
+                  span &nbsp;
+                  a(href="https://github.com/Dafrok/css-color-playground/fork").button.is-small
+                    span.icon.is-small
+                      i.fa.fa-github
+                    span Fork
               .column
                 p.control.has-icon.is-expanded
                   input.input.is-flat(v-model="inputValue", placeholder="CSS color", type="text", @mouseenter="focus")

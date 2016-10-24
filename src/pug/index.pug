@@ -25,7 +25,7 @@ html
                     span Fork
               .column
                 p.control.has-icon.is-expanded
-                  input.input.is-flat(v-model="inputValue", placeholder="CSS color", type="text", @mouseenter="focus")
+                  input.input.is-large(v-model="inputValue", placeholder="CSS color (e.g. #f00)", type="text", @mouseenter="focus")
                   i.fa.fa-css3(v-bind:style="{color: inputValue}")
       section.section
         section.container

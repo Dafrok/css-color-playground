@@ -27,7 +27,7 @@
     "rollup-plugin-uglify": "^1.0.1"
   },
   "dependencies": {
-    "clipboard-js": "^0.2.0",
+    "clipboard-js": "^0.3.3",
     "color-factory": "^0.1.8",
     "vue": "^1.0.26"
   }
